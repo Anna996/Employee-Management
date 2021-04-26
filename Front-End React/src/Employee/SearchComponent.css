@@ -1,0 +1,15 @@
+.searchComponent {
+  margin: 0 auto;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.searchComponent__select {
+  width: 200px;
+}
+
+.searchComponent__input {
+  width: 200px;
+}
