@@ -3,19 +3,21 @@
 
 
 <ul>
-<p><ins>React Hooks</ins>: useState() and useEffect().</p>
+
+<li><ins>React Hooks</ins>: useState() and useEffect().</li>
 
 <li><p><ins>Axios</ins>: a javascript library that sends HTTP requests to the server.</p></li>
 
 <li><ins>Spring-boot</ins>: Basic CRUD operations:
-<ul>
-<li> getAllEmployees </li>
-<li> getEmployeeByID</li>
-<li> getEmployeeByFirstName</li>
-<li> getEmployeeByLastName</li>
-<li> addEmployee</li>
-<li> updateEmployee</li>
-<li> deleteEmployee</li>
-</ul></li>
+    <ul>
+        <li> getAllEmployees </li>
+        <li> getEmployeeByID</li>
+        <li> getEmployeeByFirstName</li>
+        <li> getEmployeeByLastName</li>
+        <li> addEmployee</li>
+        <li> updateEmployee</li>
+        <li> deleteEmployee</li>
+    </ul>
+</li>
 
 </ul>
