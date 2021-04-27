@@ -11,10 +11,10 @@
 <li><ins>Spring-boot</ins>: Basic CRUD operations:
     <ul>
         <li> getAllEmployees </li>
-        <li> getEmployeeByID</li>
+        <li> getEmployeeById</li>
         <li> getEmployeeByFirstName</li>
         <li> getEmployeeByLastName</li>
-        <li> addEmployee</li>
+        <li> createNewEmployee</li>
         <li> updateEmployee</li>
         <li> deleteEmployee</li>
     </ul>
