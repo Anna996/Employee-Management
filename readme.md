@@ -10,7 +10,7 @@
 
 <li><ins>Asynchronous functions</ins> with Async/Await.</li>
 
-<li><ins>Spring-boot</ins>: REST API - Basic CRUD operations:
+<li><p><ins>Spring-boot</ins>: REST API - Basic CRUD operations:</p>
     <ul>
         <li> getAllEmployees </li>
         <li> getEmployeeById</li>
