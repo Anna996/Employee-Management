@@ -37,7 +37,10 @@ function AddEmployeeBtn({ handleRefreshList }) {
       };
 
       EmployeeService.addEmployee(currentEmployee)
-        .then(() => handleRefreshList())
+        .then((res) => {
+          if (res.data == "") alert("The ID number already exists");
+          else handleRefreshList();
+        })
         .catch((error) => alert(error));
     }
   };
