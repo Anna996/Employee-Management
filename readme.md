@@ -8,6 +8,8 @@
 
 <li><p><ins>Axios</ins>: a javascript library that sends HTTP requests to the server.</p></li>
 
+<li>Asynchronous functions with <ins>Async/Await</ins>.</li>
+
 <li><ins>Spring-boot</ins>: REST API - Basic CRUD operations:
     <ul>
         <li> getAllEmployees </li>
@@ -19,9 +21,9 @@
         <li> deleteEmployee</li>
     </ul>
 </li>
+</ul>
 
 <a href="https://employee-management.herokuapp.com/">Live Demo Site  - Click here to see <a/>
 <img src="">
 <img src="">
 
-</ul>
