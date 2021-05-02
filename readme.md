@@ -8,7 +8,7 @@
 
 <li><p><ins>Axios</ins>: a javascript library that sends HTTP requests to the server.</p></li>
 
-<li><ins>Asynchronous functions</ins> with Async/Await.</li>
+<li>Asynchronous functions with <ins>Async/Await</ins>.</li>
 
 <li><p><ins>Spring-boot</ins>: REST API - Basic CRUD operations:</p>
     <ul>
