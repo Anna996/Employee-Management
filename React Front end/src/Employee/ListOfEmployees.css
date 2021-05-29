@@ -1,10 +1,10 @@
 .ListOfEmployees {
-  position: relative;
   height: 460px;
   overflow: auto;
-  display: block;
   border: 5px solid cadetblue;
   padding: 10px;
+  margin: 0px 50px 50px 50px;
+  text-align: center;
 }
 
 .ListOfEmployees__table {

@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const EMPLOYEE_API_BASE_URL = "/api/";
+const EMPLOYEE_API_BASE_URL =
+  "https://employee-management-serverside.herokuapp.com/api/";
 
 /**
  * This class connects with the spring-boot server,

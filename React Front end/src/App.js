@@ -57,7 +57,7 @@ function App() {
           <AddEmployeeBtn
             className="app__addEmployeeBtn"
             handleRefreshList={handleRefreshList}
-          ></AddEmployeeBtn>
+          />
 
           <button className="btn btn-info" onClick={handleShowAllEmployeesBtn}>
             Show All Employees

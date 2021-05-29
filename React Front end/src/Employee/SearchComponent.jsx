@@ -18,12 +18,9 @@ function SearchComponent({ searchBtn }) {
   };
 
   return (
-    <form className="searchComponent form-group row">
+    <form className="searchComponent ">
       <label className="col-form-label">Search By: </label>
-      <select
-        class="searchComponent__select form-control"
-        onChange={(e) => handleSelected(e)}
-      >
+      <select class="form-control" onChange={(e) => handleSelected(e)}>
         <option value="select">Select</option>
         <option value="id">ID</option>
         <option value="firstname"> First name</option>
@@ -31,12 +28,12 @@ function SearchComponent({ searchBtn }) {
       </select>
       <input
         type="text"
-        className="searchComponent__input form-control"
+        className="form-control"
         onChange={(e) => setInput(e.target.value)}
       ></input>
       <button
         type="submit"
-        className="searchComponent__btn btn btn-primary"
+        className="btn btn-primary"
         onClick={(e) => handleClicked(e)}
       >
         Search

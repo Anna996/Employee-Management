@@ -1,15 +1,26 @@
 .searchComponent {
   margin: 0 auto;
-  width: 600px;
+  width: fit-content;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  place-content: center;
 }
 
-.searchComponent__select {
-  width: 200px;
+.searchComponent label {
+  margin: 10px 10px 0px 0px;
 }
 
-.searchComponent__input {
+.searchComponent select {
   width: 200px;
+  margin: 10px 10px 0px 0px;
+}
+
+.searchComponent input {
+  width: 200px;
+  margin: 10px 10px 0px 0px;
+}
+
+.searchComponent button {
+  margin: 10px 10px 0px 0px;
 }
