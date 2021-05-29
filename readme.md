@@ -23,5 +23,5 @@
 </li>
 </ul>
 
-<a href="https://employee-management-fullstack.netlify.app//">Live Demo Site  - Click here to see <a/>
+<a href="https://employee-management-fullstack.netlify.app/">Live Demo Site  - Click here to see <a/>
 
