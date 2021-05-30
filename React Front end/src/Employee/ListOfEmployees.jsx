@@ -5,6 +5,7 @@ import UpdateBtn from "./UpdateBtn";
 
 function ListOfEmployees({ specificData, refreshList, handleRefreshList }) {
   const [employees, setEmployees] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleResultLength = (res) => {
     if (res.data instanceof Array) setEmployees(res.data);
@@ -46,6 +47,7 @@ function ListOfEmployees({ specificData, refreshList, handleRefreshList }) {
         hasResult = false;
     }
 
+    if (loading) setLoading(false);
     if (hasResult) {
       result
         .then((res) => {
@@ -57,43 +59,56 @@ function ListOfEmployees({ specificData, refreshList, handleRefreshList }) {
 
   return (
     <div className="ListOfEmployees">
-      <table className="ListOfEmployees__table ">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">FirstName</th>
-            <th scope="col">LastName</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {employees.map((data) => (
+      {loading ? (
+        <>
+          <table className="ListOfEmployees__table " />
+          <div className=" loading">
+            <div>
+              <div className="spinner-border" role="status" />
+            </div>
+            Connecting to the server...
+          </div>
+        </>
+      ) : (
+        <table className="ListOfEmployees__table ">
+          <thead>
             <tr>
-              <td> {data.id}</td>
-              <td>{data.firstname}</td>
-              <td>{data.lastname}</td>
-              <td>
-                <UpdateBtn
-                  key={data.id}
-                  data={data}
-                  handleRefreshList={handleRefreshList}
-                />
-              </td>
-              <td>
-                <button
-                  className="btn btn-primary btn-sm"
-                  key={data.id}
-                  id={data.id}
-                  onClick={(e) => handleDelete(e)}
-                >
-                  delete
-                </button>
-              </td>
+              <th scope="col">ID</th>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {employees.map((data) => (
+              <tr>
+                <td> {data.id}</td>
+                <td>{data.firstname}</td>
+                <td>{data.lastname}</td>
+                <td>
+                  <UpdateBtn
+                    key={data.id}
+                    data={data}
+                    handleRefreshList={handleRefreshList}
+                  />
+                </td>
+                <td>
+                  <button
+                    className="btn btn-primary btn-sm"
+                    key={data.id}
+                    id={data.id}
+                    onClick={(e) => handleDelete(e)}
+                  >
+                    delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 }
