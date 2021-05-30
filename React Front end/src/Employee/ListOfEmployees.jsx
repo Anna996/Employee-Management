@@ -10,6 +10,7 @@ function ListOfEmployees({ specificData, refreshList, handleRefreshList }) {
   const handleResultLength = (res) => {
     if (res.data instanceof Array) setEmployees(res.data);
     else setEmployees([res.data]);
+    if (loading) setLoading(false);
   };
 
   // Asks the server to delete the current employee from the database.
@@ -47,13 +48,16 @@ function ListOfEmployees({ specificData, refreshList, handleRefreshList }) {
         hasResult = false;
     }
 
-    if (loading) setLoading(false);
     if (hasResult) {
       result
         .then((res) => {
           if (res != null) handleResultLength(res);
         })
-        .catch((err) => alert(err));
+        .catch((err) => {
+          document.getElementById("spinner").style.display = "none";
+          document.getElementById("connect").innerText = err;
+          if (!loading) setLoading(true);
+        });
     }
   }, [specificData, refreshList]);
 
@@ -64,9 +68,9 @@ function ListOfEmployees({ specificData, refreshList, handleRefreshList }) {
           <table className="ListOfEmployees__table " />
           <div className=" loading">
             <div>
-              <div className="spinner-border" role="status" />
+              <div id="spinner" className="spinner-border" role="status" />
             </div>
-            Connecting to the server...
+            <span id="connect"> Connecting to the server...</span>
           </div>
         </>
       ) : (
